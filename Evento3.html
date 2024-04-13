@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Evento_3</title>
+    <style>
+      p {
+        color: blue;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      button {
+        display: block;
+        margin: 20px 0 190px 20px;
+      }
+
+      .button-bar {
+        padding: 20px 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <div class="button-bar">
+      <button data-color="red">Red</button>
+      <button data-color="yellow">Yellow</button>
+      <button data-color="green">Green</button>
+      <button data-color="purple">Purple</button>
+    </div>
+
+  <script>
+
+  const buttonBar = document.querySelector('.button-bar');
+
+  // Add your code here
+// Agregar un event listener al elemento padre
+buttonBar.addEventListener('click', (event) => {
+  // Verificar si el elemento clickeado es un botón
+  if (event.target.tagName === 'BUTTON') {
+    // Obtener el color del atributo data-color del botón clickeado
+    const color = event.target.getAttribute('data-color');
+    // Establecer el color de fondo del button-bar al color obtenido
+    buttonBar.style.backgroundColor = color;
+  }
+});
+  </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Evento_1</title>
+    <style>
+      p {
+        color: blue;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      button {
+        display: block;
+        margin: 20px 0 20px 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <button class="off">Machine is off</button>
+
+  <script>
+    const btn = document.querySelector('.off');
+
+    // Add your code here
+    // Función para cambiar el texto del botón
+function toggleButtonText() {
+  if (btn.textContent === 'Machine is off') {
+    btn.textContent = 'Machine is on';
+  } else {
+    btn.textContent = 'Machine is off';
+  }
+}
+
+// Agregar un evento de clic al botón que llame a la función toggleButtonText()
+btn.addEventListener('click', toggleButtonText);
+  </script>
+
+  </body>
+</html>
