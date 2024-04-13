@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Funcion_3</title>
+    <style>
+      p {
+        color: blue;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    const para = document.createElement('p');
+
+    // Add your code here
+    // Función para generar un número aleatorio entre min y max (ambos inclusive)
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Función mejorada chooseName() que toma un array como parámetro y devuelve un nombre aleatorio del array
+function chooseName(namesArray) {
+  const randomIndex = random(0, namesArray.length - 1);
+  return namesArray[randomIndex];
+}
+
+// Establecer el texto del párrafo con el nombre aleatorio
+para.textContent = chooseName(names);
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>
